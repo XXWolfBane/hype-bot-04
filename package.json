@@ -1,0 +1,7 @@
+{
+   "name": "HypeBot",
+   "dependencies": {
+       "discord.js": "11.3.1",
+       "ms": "^2.1.1"
+   }
+}
