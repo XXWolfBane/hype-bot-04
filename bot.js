@@ -1,6 +1,8 @@
 const discord = require('discord.js')
 const bot = new discord.Client()
 const prefix = process.env.prefix
+bot.login(process.env.token)
+
 //const {baselogger};
 
 bot.commands = new discord.Collection();
@@ -15,7 +17,7 @@ require('fs').readdir("./commands/", (err, files) => {
 
 bot.on('ready', () => {
   bot.user.setActivity(`for ${prefix}help | ${bot.guilds.size} servers`, {type: "WATCHING"});
-  console.log("Pancake READY!");
+  console.log("Hype READY!");
 })
 
 bot.on('message', message => {
@@ -34,4 +36,3 @@ bot.on('message', message => {
   }
 })
 
-bot.login(process.env.token)
